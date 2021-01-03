@@ -1,3 +1,3 @@
 # Algorithm
 
-My Alogrithm laboratory 🐣
+My Alogrithm laboratory 🐣🐣
