@@ -11,4 +11,4 @@ My Alogrithm laboratory 🐣🐣
 
 ### BAEKJOON
 
-1. [사다리조작 15684](https://github.com/bominjang/Algorithm/blob/main/src/programmers/src4.java)
+1. [사다리조작 15684](https://github.com/bominjang/Algorithm/blob/main/src/baekjoon/15684.java)
