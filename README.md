@@ -12,3 +12,4 @@ My Alogrithm laboratory 🐣🐣
 ### BAEKJOON
 
 1. [사다리조작 15684](https://github.com/bominjang/Algorithm/blob/main/src/baekjoon/15684.java)
+2. [분해합 2231](https://github.com/bominjang/Algorithm/blob/main/src/baekjoon/2331.java)
