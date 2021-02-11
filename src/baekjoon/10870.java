@@ -21,3 +21,6 @@ public class Main {
 
 // Scanner보다 BufferedReader가 시간이 적게 걸림.
 // 피보나치는 재귀말고 for문으로도 구현할 수 있음
+/*
+@author kdgyun
+*/
