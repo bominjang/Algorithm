@@ -70,3 +70,7 @@ public class Main {
         min = Math.min(min, count);
     }
 }
+
+/*
+@author kdgyun
+*/
