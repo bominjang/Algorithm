@@ -38,3 +38,7 @@ public class Main {
 		}
 	}
 }
+
+/*
+@author kdgyun
+*/
