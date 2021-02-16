@@ -8,7 +8,7 @@ class Solution {
         int[][] supoja = new int[][]{{1,2,3,4,5},
                 {2,1,2,3,2,4,2,5},
                 {3,3,1,1,2,2,4,4,5,5}};
-        score = new int[supoja.length];
+        score = new int[supoja.length+1];
 
         checkAnswers(answers, supoja);
 
@@ -18,24 +18,26 @@ class Solution {
         }
 
         List<Integer> winner = new ArrayList<Integer>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 1; i < 4; i++) {
             if (score[i] == max) {
                 winner.add(i);
             }
         }
 
-        int[] answer = new int[winner.size()];
-        for (int i = 0; i < winner.size(); i++) {
-            answer[i] = winner.get(i) + 1;
-        }
-        Arrays.sort(answer);
+        winner.sort(null);
 
+        int[] answer = new int[winner.size()];
+        
+        int i=0;
+        for(int a:winner){
+            answer[i++]=a;
+        }
         return answer;
     }
 
     private int findMax() {
         int max = 0;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 1; i < 4; i++) {
             if (score[i] > max) {
                 max = score[i];
             }
@@ -49,7 +51,7 @@ class Solution {
         for(int i=0;i<answers.length;i++){
             for(int j =0;j<supoja.length;j++){
                 if(answers[i]==supoja[j][i % supoja[j].length]){
-                    score[j]++;
+                    score[j+1]++;
                 }
             }
         }
