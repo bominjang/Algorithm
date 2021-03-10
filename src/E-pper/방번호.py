@@ -1,4 +1,5 @@
-def solution(num):
+def solution():
+    num = intput()
     number = 0 #방 안에서의 번호
     room = 0 #방의 번호 
     if(num%15==0):
