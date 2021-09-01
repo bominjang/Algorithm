@@ -1,63 +1,56 @@
+#include <algorithm>
 #include <iostream>
 #include <stack>
-#include <string>
-
 using namespace std;
 
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+string str;
+stack<char> oper;
 
-    string s;
-    stack<char> op;
-    cin >> s;
-
-    for (int i = 0; i < s.length(); i++)
-    {
-        if (s[i] >= 'A' && s[i] <= 'Z')
-        {
-            cout << s[i];
+void postfix() {
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            printf("%c", str[i]);
+            continue;
         }
-        else
-        {
-            if (s[i] == '(')
-                op.push(s[i]);
-            else if (s[i] == '*' || s[i] == '/')
-            {
-                while (!op.empty() && (op.top() == '*' || op.top() == '/'))
-                {
-                    cout << op.top();
-                    op.pop();
-                }
-                op.push(s[i]);
+        if (str[i] == '(') { oper.push(str[i]); }
+        else if (str[i] == '*' || str[i] == '/') {
+            while (!oper.empty() && (oper.top() == '*' || oper.top() == '/')) {
+                printf("%c", oper.top());
+                oper.pop();
             }
-            else if (s[i] == '+' || s[i] == '-')
-            {
-                while (!op.empty() && op.top() != '(')
-                {
-                    cout << op.top();
-                    op.pop();
-                }
-                op.push(s[i]);
+            oper.push(str[i]);
+        } else if (str[i] == '+' || str[i] == '-') {
+            while (!oper.empty() && (oper.top() != '(')) {
+                printf("%c", oper.top());
+                oper.pop();
             }
-            else if (s[i] == ')')
-            {
-                while (!op.empty() && op.top() != '(')
-                {
-                    cout << op.top();
-                    op.pop();
-                }
-                op.pop();
+            oper.push(str[i]);
+        } else if (str[i] == ')') {
+            while (!oper.empty() && oper.top() != '(') {
+                printf("%c", oper.top());
+                oper.pop();
             }
+            oper.pop();
         }
     }
-    while (!op.empty())
-    {
-        cout << op.top();
-        op.pop();
+    while (!oper.empty()) {
+        printf("%c", oper.top());
+        oper.pop();
     }
+    printf("\n");
+}
+
+void input() {
+    cin >> str;
+}
+
+void solve() {
+    input();
+    postfix();
+}
+
+int main() {
+    solve();
 
     return 0;
 }
