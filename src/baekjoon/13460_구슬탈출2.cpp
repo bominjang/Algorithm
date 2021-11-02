@@ -147,3 +147,5 @@ int main(void){
     Solve();
     return 0;
 }
+
+//[ref] : https://yabmoons.tistory.com/229
