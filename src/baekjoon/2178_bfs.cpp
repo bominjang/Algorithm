@@ -39,7 +39,6 @@ void bfs(int y, int x){
 }
 
 void Solution(){
-    //방향 선택. 중복순열 구하기
     memset(visit, false, sizeof(visit));
     bfs(0,0);
     cout<< path[N-1][M-1]<<endl;
