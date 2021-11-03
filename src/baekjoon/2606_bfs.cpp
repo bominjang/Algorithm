@@ -9,8 +9,6 @@ using namespace std;
 int N, M;
 int map[MAX][MAX];
 bool visit[MAX];
-int dx[4] = {-1, 1, 0, 0};
-int dy[4] = {0, 0, -1, 1};
 
 int bfs(int x){
     int cnt =0;
